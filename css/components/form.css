@@ -1,0 +1,15 @@
+.form-control {
+  width: 100%;
+  position: relative;
+  padding: 3px 0;
+}
+.form-control .label {
+  width: 20%;
+  text-align: right;
+  float: left;
+  padding-right: 5px;
+}
+.form-control .input-control {
+  width: 80%;
+  float: left;
+}

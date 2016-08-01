@@ -1,0 +1,53 @@
+.sidebar {
+    background-color: @color-background;
+    padding-bottom: 20px;
+    position: absolute;
+    width: 16.667%;
+    top: 0;
+    bottom: 0;
+
+    .user-profile {
+        padding: 20px 20px 5px;
+        .box-sizing-prefix(border-box);
+        width: 100%;
+
+        img {
+            width: 70px;
+            .border-radius-prefix(50%);
+        }
+
+        p {
+            color: #eee;
+            margin-top: 10px;
+        }
+    }
+
+    ul {
+        width: 100%;
+        .box-sizing-prefix(border-box);
+        padding: 0 20px;
+    }
+
+    a {
+        display: block;
+        color: @color-light-font;
+        padding: 5px 0;
+
+        &:hover,
+        &.current {
+            color: @color-lighter-font;
+        }
+    }
+
+    & > ul > li {
+        border-top: 1px solid #888;
+
+        &:last-child {
+            border-bottom: 1px solid #888;
+        }
+
+        & > a {
+            padding: 10px 0;
+        }
+    }
+}

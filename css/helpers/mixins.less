@@ -1,0 +1,52 @@
+.generate-columns(@total-columns, @i: 1) when (@i =< @total-columns) {
+    .col-@{i} {
+        width: (@i * 100% / @total-columns);
+        float: left;
+        min-height: 1px;
+    }
+    .generate-columns(@total-columns, (@i + 1));
+}
+
+.box-sizing-prefix(@box-sizing) {
+    -webkit-box-sizing: @box-sizing;
+    -moz-box-sizing: @box-sizing;
+    box-sizing: @box-sizing;
+}
+
+.border-radius-prefix(@border-box) {
+    -webkit-border-radius: @border-box;
+    -moz-border-radius: @border-box;
+    border-radius: @border-box;
+}
+
+.webkit-moz-prefix(@attribute; @value) {
+    -webkit-@{attribute}: @value;
+    -moz-@{attribute}: @value;
+    @{attribute}: @value;
+}
+
+.webkit-moz-o-prefix(@attribute, @value) {
+    .webkit-moz-prefix(@attribute; @value);
+    -o-@{attribute}: @value;
+}
+
+.all-prefix(@attribute; @value) {
+    -webkit-@{attribute}: @value;
+    -moz-@{attribute}: @value;
+    -ms-@{attribute}: @value;
+    -o-@{attribute}: @value;
+    @{attribute}: @value;
+
+}
+
+.button-style(@color; @background-color; @border-color) {
+    color: @color;
+    background-color: @background-color;
+    border: 1px solid @border-color;
+
+    &:hover,
+    &:focus,
+    &:visited {
+        background-color: saturate(@background-color, 20%);
+    }
+}

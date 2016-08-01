@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+
+    & > .col-6 {
+        height: 100%;
+
+        & > .col-1 {
+            height: 100%;
+        }
+    }
+}
+
+.generate-columns(6);
+
+.content {
+    padding: 10px;
+    .box-sizing-prefix(border-box);
+}

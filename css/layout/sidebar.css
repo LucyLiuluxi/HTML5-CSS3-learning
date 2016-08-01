@@ -1,0 +1,17 @@
+.sidebar {
+  width: 100%;
+  position: relative;
+}
+.sidebar .user-profile {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.sidebar .user-profile img {
+  width: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
